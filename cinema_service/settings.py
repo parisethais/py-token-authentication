@@ -105,5 +105,3 @@ REST_FRAMEWORK = {
         "cinema.permissions.IsAdminOrIfAuthenticatedReadOnly",
     ],
 }
-
-DJANGO_SETTINGS_MODULE = "cinema_service.settings"

@@ -8,7 +8,7 @@ class IsAdminOrIfAuthenticatedReadOnly(BasePermission):
         if not user or not user.is_authenticated:
             return False
 
-        if user.is_staff:
+        if request.method in SAFE_METHODS:
             return True
 
-        return request.method in SAFE_METHODS
+        return user.is_staff
